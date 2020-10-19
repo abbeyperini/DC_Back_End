@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+html {
+    color: grey;
+}
+
+label {
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#enterTasks {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 5%;
+    padding-bottom: 0;
+    align-items: center;
+}
+
+#enterTasks button {
+    margin: 10px;
+}
+
+#pendingTasks, #completedTasks {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 5%;
+    padding-top: 0;
+}
+
+#pendingTasks div, #completedTasks div {
+    padding: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+h3 {
+    padding: 10px;
+    margin: 5px;
+}
+
+#pendingTasks > div > h3, #completedTasks > div > h3 {
+    width: 100%;
+}
+
+.task {
+    display: flex;
+    background-color: #52796F;
+}
+
+#completedTasks .task {
+    background-color: #7A9E7E;
+}
+
+button {
+    background-color: #354F52;
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.date, .priority, .priorityLabel, .priorityBox {
+    padding: 15px;
+}

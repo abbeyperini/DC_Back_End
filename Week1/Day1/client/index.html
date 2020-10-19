@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width' initial-scale='1.0' maximum-scale='1.0'/>
+        <title></title>
+        <link rel='stylesheet' href='styles.css'/>
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> -->
+    </head>
+    <body onload="getAllTasks()">
+        <main>
+            <nav id="enterTasks">
+                <h3>Enter Task:</h3>
+                <input type="text" id="taskTitleInput" placeholder="Task Name">
+                <label class="priorityLabel" for="priority">Choose a priority:</label>
+                <select class="prorityBox" name="priority" id="priority">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <button id="addTask">Add</button>
+            </nav>
+            <h3>Pending Tasks</h3>
+            <div id="pendingTasks">
+            </div>
+            <!-- <h3>Completed Tasks</h3>
+            <div id="completedTasks">
+            </div> -->
+        </main>
+    </body>
+    <script src="app.js"></script>
+</html>
