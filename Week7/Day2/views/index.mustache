@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width' initial-scale='1.0' maximum-scale='1.0'/>
+        <title>Trips</title>
+        <link rel='stylesheet' type='text/css' href='styles.css'/>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Upcoming Trips</h1>
+        </header>
+        <nav>
+            <form method="POST" action="/create-trip" class="addTrip">
+                <input type="text" placeholder="City" name="city" pattern="[^a-zA-Z \-]|( )|(\-\-)|(^\s*$)"/>
+                <input type="text" placeholder="Departure" name="departure" pattern="^\d{1,2}\/\d{1,2}\/\d{4}$"/>
+                <input type="text" placeholder="Return" name="return" pattern="^\d{1,2}\/\d{1,2}\/\d{4}$"/>
+                <input type="text" placeholder="Image URL" name="image" pattern="^(http\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(?:\/\S*)?(?:[a-zA-Z0-9_])+\.(?:jpg|jpeg|gif|png))$"/>
+                <button>Submit</button>
+            </form>
+        </nav>
+        <ul class="grid">
+        {{#allTrips}}
+            <li>
+                <form method="POST" action="/delete-trip">
+                    <h3>{{city}}</h3>
+                    <img src="{{image}}" alt="trip image">
+                    <p>{{departFormat}} - {{returnFormat}}</p>
+                    <input type="hidden" value="{{tripID}}" name="tripID"/>
+                    <button>Delete</button>
+                </form>
+            </li>
+        {{/allTrips}}
+        </ul>
+    <footer>
+        <form method="GET" action="/sort-depart">
+            <label>Sort by Departure Date</label>
+            <button>Sort</button>
+        </form>
+        <form method="POST" action="/filter-city">
+            <label>Search by City</label>
+            <input type="text" placeholder="City" name="city" pattern="[^a-zA-Z \-]|( )|(\-\-)|(^\s*$)">
+            <button>Search</button>
+        </form>
+        <form method="GET" action="/update">
+            <label>Update Trip Details</label>
+            <button>Update</button>
+        </form>
+    <footer>
+    </body>
+</html>

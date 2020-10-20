@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width' initial-scale='1.0' maximum-scale='1.0'/>
+        <title>Trips</title>
+        <link rel='stylesheet' type='text/css' href='styles.css'/>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Update Trips</h1>
+        </header>
+        <ul class="grid">
+        {{#allTrips}}
+            <li>
+                <form method="POST" action="/update-trip">
+                    <h3>{{city}}</h3>
+                    <img src="{{image}}" alt="trip image">
+                    <p>{{departFormat}} - {{returnFormat}}</p>
+                    <div class="updateBoxes">
+                        <input type="hidden" value="{{tripID}}" name="tripID"/>
+                        <input type="text" placeholder="City" name="city" pattern="[^a-zA-Z \-]|( )|(\-\-)|(^\s*$)"/>
+                        <input type="text" placeholder="Departure" name="departure" pattern="^\d{1,2}\/\d{1,2}\/\d{4}$"/>
+                        <input type="text" placeholder="Return" name="return" pattern="^\d{1,2}\/\d{1,2}\/\d{4}$"/>
+                        <input type="text" placeholder="Image URL" name="image" pattern="^(http\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(?:\/\S*)?(?:[a-zA-Z0-9_])+\.(?:jpg|jpeg|gif|png))$"/>
+                        <button>Submit</button>
+                    </div>
+                </form>
+            </li>
+        {{/allTrips}}
+        </ul>
+        <footer>
+            <a href="/"><button>Home</button></a>
+        </footer>
+    </body>
+</html>
