@@ -39,7 +39,7 @@ function displayAllTasks(tasks) {
         <h3>${task.taskName}</h3> 
         <p class="priority">Priority: ${task.priority}</p> 
         <p class="date">Date Added: ${task.date}</p>
-        <button class='remove' onclick="deleteTask(${task.id})">Remove</button>
+        <button class='remove' onclick="deleteTask('${task.id}')">Remove</button>
         </div>`;
         if (task.class == "pending") {
             pendingTasks.insertAdjacentHTML('beforeend', taskItem);
@@ -64,17 +64,18 @@ function postTask() {
             "priority": priorityValue,
             "date": formatDate
         })
-    });
-    getAllTasks();
+    }).then(response => response.json())
+    .then(result => getAllTasks())
 };
 
 // Ability to delete an existing TODO item
 function deleteTask(id) {
     fetch(`http://localhost:3000/tasks/${id}`, {
         method: 'DELETE'
-    });
-    getAllTasks();
+    }).then(response => response.json())
+    .then(result => getAllTasks())
 };
 
 // Ability to update an existing TODO item
+// Update class and switch between pending and completed tasks
 // Hard mode: user can sort pending tasks by drag and drop and order persists on page reload
