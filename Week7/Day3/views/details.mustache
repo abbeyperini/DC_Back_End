@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width' initial-scale='1.0' maximum-scale='1.0'/>
+        <title>Movies</title>
+        <link rel='stylesheet' href='/styles/styles.css'/>
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="details">
+            {{#details}}
+                <h1>{{title}}</h1>
+                <img src="{{image}}" alt="movie poster">
+                <p>{{genre}}</p>
+                <p>{{description}}</p>
+            {{/details}}
+        </div>
+        <footer>
+            <a href="http://localhost:3000/"><button>Home</button></a>
+        </footer>
+    </body>
+</html>

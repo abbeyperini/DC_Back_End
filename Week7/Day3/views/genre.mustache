@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width' initial-scale='1.0' maximum-scale='1.0'/>
+        <title>Movies</title>
+        <link rel='stylesheet' href='/styles/styles.css'/>
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        {{#genreMovies}}
+        <ul class="genre">
+            <li>
+                <form method="POST">
+                    <h3>{{title}}</h3>
+                    <img src="{{image}}" alt="movie poster">
+                    <p>{{genre}}</p>
+                    <div>
+                        <button formaction="/movies/movieID/{{movieID}}">Details</button>
+                    </div>
+                </form>
+            </li>
+        </ul>
+        {{/genreMovies}}
+        <footer>
+            <a href="http://localhost:3000/"><button>Home</button></a>
+        </footer>
+    </body>
+</html>

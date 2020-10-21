@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width' initial-scale='1.0' maximum-scale='1.0'/>
+        <title>Movies</title>
+        <link rel='stylesheet' href='/styles/styles.css'/>
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Show Me the Movies</h1>
+        <form method="POST" action="/movies/create" class="addMovie">
+            <input type="text" placeholder="Title" name="title" pattern='^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$'/>
+            <input type="text" placeholder="Description" name="description" pattern='^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$'/>
+            <input type="text" placeholder="Genre" name="genre" pattern='^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$'/>
+            <input type="text" placeholder="Image URL" name="image" pattern="^(http\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(?:\/\S*)?(?:[a-zA-Z0-9_])+\.(?:jpg|jpeg|gif|png))$"/>
+            <button>Submit</button>
+        </form>
+        <ul class="grid">
+            {{#movies}}
+                <li>
+                    <form method="POST">
+                        <h3>{{title}}</h3>
+                        <img src="{{image}}" alt="movie poster">
+                        <input type="hidden" value="{{movieID}}" name="movieID"/>
+                        <div>
+                            <button formaction="/movies/delete">Delete</button>
+                            <button formaction="/movies/movieID/{{movieID}}">Details</button>
+                        </div>
+                    </form>
+                </li>
+            {{/movies}}
+        </ul>
+        <footer>
+            <h3>Movies by Genre</h3>
+            <nav id="genreNav">
+                <form method="GET">
+                    <button type="submit" formaction="movies/genre/Action">Action</button> 
+                    <button type="submit" formaction="movies/genre/Comedy">Comedy</button> 
+                    <button type="submit" formaction="movies/genre/Drama">Drama</button> 
+                    <button type="submit" formaction="movies/genre/Horror">Horror</button>
+                    <button type="submit" formaction="movies/genre/Romance">Romance</button>
+                    <button type="submit" formaction="movies/genre/Science_fiction">Science Fiction</button>
+                    <button type="submit" formaction="movies/genre/Fantasy">Fantasy</button>
+                    <button type="submit" formaction="movies/genre/Thriller">Thriller</button>
+                    <button type="submit" formaction="movies/genre/Western">Western</button>
+                    <button type="submit" formaction="movies/genre/Crime">Crime</button>
+                </form>
+            </nav>
+        </footer>
+    </body>
+</html>
