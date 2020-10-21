@@ -28,3 +28,17 @@
 <img src="screenshots/tripdesktop.png" alt="Trip Desktop" width=600 height=315>
 
 <img src="screenshots/updatetripdesktop.png" alt="Update Trip Desktop" width=600 height=314>
+
+**Week 7 Day 3 - Movies App**
+
+- Prompt was to create a website using mustache routes which will allow the user perform the following features: 
+  - Ability to add a movie (title, description, genre, posterURL) 
+  - Ability to delete a movie 
+  - Ability to filter movies based on the genre 
+  - Ability to go to movie details page
+
+<img src="screenshots/moviedesktop.png" alt="Movie Desktop" width=600 height=316>
+<img src="screenshots/moviedesktop2.png" alt="Movie Desktop" width=600 height=140>
+
+<img src="screenshots/moviemobile.png" alt="Movie Mobile" width=270 height=481>
+<img src="screenshots/moviemobile2.png" alt="Movie Mobile" width=269 height=482>
