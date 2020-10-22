@@ -42,3 +42,8 @@
 
 <img src="screenshots/moviemobile.png" alt="Movie Mobile" width=270 height=481>
 <img src="screenshots/moviemobile2.png" alt="Movie Mobile" width=269 height=482>
+
+**Week 7 Day 4 - User Login**
+
+- Prompt was to add the ability to allow user to register, login, signout, and only see their information after they login successfully to a previous app.
+- We were encouraged to apply these things to a hobby project if we didn't like the previous prompt, so I started PetPlanner.
