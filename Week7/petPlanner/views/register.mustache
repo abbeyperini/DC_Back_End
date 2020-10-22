@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width' initial-scale='1.0' maximum-scale='1.0'/>
+        <title>PetPlanner</title>
+        <link rel='stylesheet' href='/styles/styles.css'/>
+        <link rel="shortcut icon" href="/images/pepper.svg" type="image/x-icon">
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> -->
+    </head>
+    <body>
+        <header>
+            <img src="/images/pepper.svg" alt="silhouette of a dog" width="300px">
+            <h1>PetPlanner</h1>
+        </header>
+        <h3>{{message}}</h3>
+        <nav class="registerBox">
+            <form method="POST" action="/register/user">
+                <input type="text" placeholder="username" name="username" pattern="[^a-zA-Z \-]|( )|(\-\-)|(^\s*$)">
+                <!--This match fields contain only letters, a single hyphen, a single space, not empty-->
+                <input type="text" placeholder="password" name="password" pattern="^(?=.*\d).{4,8}$">
+                <!--between 4 and 8 digits long and include at least one numeric digit.-->
+                <button>Submit</button>
+            </form>
+            <p>Already have a username? <a href='/'>Log in</a></p>
+        </nav>
+    </body>
+</html>

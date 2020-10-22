@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width' initial-scale='1.0' maximum-scale='1.0'/>
+        <title>PetPlanner</title>
+        <link rel="shortcut icon" href="/images/pepper.svg" type="image/x-icon">
+        <link rel='stylesheet' href='/styles/styles.css'/>
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> -->
+    </head>
+    <body>
+        <header>
+            <img src="/images/pepper.svg" alt="silhouette of a dog" width="300px">
+            <h1>PetPlanner</h1>
+        </header>
+        <nav>
+            <form method="Post" action="/dashboard/add-pet">
+                <input type="text" placeholder="Pet Name" name="petName">
+                <input type="text" placeholder="Image URL" name="image">
+                <button>Submit</button>
+            </form>
+        </nav>
+        {{#pets}}
+            <h3>{{petName}}</h3>
+            <img src="{{image}}" alt="pet photo" width="300px">
+        {{/pets}}
+        <form method="GET" action="/dashboard/sign-out">
+            <button>Sign Out</button>
+        </form>
+    </body>
+</html>
