@@ -11,12 +11,12 @@
         {{#genreMovies}}
         <ul class="genre">
             <li>
-                <form method="POST">
+                <form method="GET">
                     <h3>{{title}}</h3>
                     <img src="{{image}}" alt="movie poster">
                     <p>{{genre}}</p>
                     <div>
-                        <button formaction="/movies/movieID/{{movieID}}">Details</button>
+                        <button formaction="/{{movieID}}">Details</button>
                     </div>
                 </form>
             </li>

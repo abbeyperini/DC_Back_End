@@ -19,13 +19,13 @@
         <ul class="grid">
             {{#movies}}
                 <li>
-                    <form method="POST">
+                    <form method="GET">
                         <h3>{{title}}</h3>
                         <img src="{{image}}" alt="movie poster">
                         <input type="hidden" value="{{movieID}}" name="movieID"/>
                         <div>
                             <button formaction="/movies/delete">Delete</button>
-                            <button formaction="/movies/movieID/{{movieID}}">Details</button>
+                            <button formaction="/movies/{{movieID}}">Details</button>
                         </div>
                     </form>
                 </li>

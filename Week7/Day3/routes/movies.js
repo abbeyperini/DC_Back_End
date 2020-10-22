@@ -32,6 +32,7 @@ router.post('/create', (req, res) => {
     };
 
     moviesArray.push(movie);
+    console.log(moviesArray)
 
     res.redirect('/');
 });
@@ -48,10 +49,10 @@ router.post('/delete', (req, res) => {
 });
 
 // Details about the movie (Show poster image, title, genre and description on this page)
-router.post('/movieID/:movieID', (req, res) => {
+router.get('/:movieID', (req, res) => {
     const movieID = req.params.movieID;
 
-    let detailedMovie = moviesArray.filter(movie => {
+    let detailedMovie = moviesArray.find(movie => {
         return movie.movieID == movieID;
     });
 
