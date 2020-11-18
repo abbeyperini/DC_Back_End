@@ -1,14 +1,9 @@
-<h1> Week 7 DigitalCrafts Full-Stack Immersive </h1>
+<h1> Week 7 and Week 8 DigitalCrafts Full-Stack Immersive </h1>
 
  - Coursework on Node, Express, Mustache server side pages, SQL, CRUD, and Sequelize ORM. It contains assignments, files, and 
-  screenshots from week 7.  
+  screenshots from week 7 and week 8.  
 
 <h2> Summary </h2>
-
-  - [Screenshots](#screenshots)
-  - [Acknowledgments](#acknowledgments)
-
-## Screenshots
 
 **Week 7 Day 1 - To Do List App**
 
