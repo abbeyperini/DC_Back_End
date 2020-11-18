@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width' initial-scale='1.0' maximum-scale='1.0'/>
+        <title>PetPlanner</title>
+        <link rel="shortcut icon" href="/images/pepper.svg" type="image/x-icon">
+        <link rel='stylesheet' href='/styles/styles.css'/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        {{> header}}
+        {{> menu}}
+        <main>
+        <ul>
+            {{#pets}}
+            <h1>Name: {{name}}</h1>
+            <ul>
+                {{#providers}}
+                    <li>
+                        <h3>Service: {{service}}</h3>
+                        <p>Name: {{name}}</p>
+                        <p>Number: {{number}}</p>
+                        <form method="POST" action="/dashboard/delete-care">
+                            <input type="hidden" name="id" value={{id}}>
+                            <button>Delete</button>
+                        </form>
+                    </li>
+                {{/providers}}
+            </ul>
+            <li>
+                <h3>Add a pet care service provider</h3>
+                <form method="POST" action="/dashboard/add-care">
+                    <input type="text" placeholder="Service Provided" name="service">
+                    <input type="text" placeholder="Name" name="name">
+                    <input type="text" placeholder="Phone Number" name="number">
+                    <input type="hidden" name="id" value={{id}}>
+                    <button>add</button>
+                </form>
+            </li>
+            {{/pets}}
+        </ul>
+        </main>
+        {{> footer}}
+    </body>
+</html>

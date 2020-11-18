@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width' initial-scale='1.0' maximum-scale='1.0'/>
+        <title>PetPlanner</title>
+        <link rel="shortcut icon" href="/images/pepper.svg" type="image/x-icon">
+        <link rel='stylesheet' href='/styles/styles.css'/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        {{> header}}
+        {{> menu}}
+        <main>
+            {{#pets}}
+                <h3>{{name}}</h3>
+                <p>Favorite things: {{favorites}}</p>
+            {{/pets}}
+        </main>
+        {{> footer}}
+    </body>
+</html>

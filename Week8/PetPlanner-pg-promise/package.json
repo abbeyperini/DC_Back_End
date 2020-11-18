@@ -1,0 +1,28 @@
+{
+  "name": "petplanner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abbeyperini/PetPlanner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abbeyperini/PetPlanner/issues"
+  },
+  "homepage": "https://github.com/abbeyperini/PetPlanner#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mustache-express": "^1.3.0",
+    "pg-promise": "^10.7.1",
+    "uuid": "^8.3.1"
+  }
+}

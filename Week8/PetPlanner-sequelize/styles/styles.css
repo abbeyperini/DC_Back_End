@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* colors
+saddle brown - #813405
+flame - #D45113
+deep saffron - #F9A03F
+peach - #F7DCA1
+aero blue - #C7EFCF */
+
+
+html {
+    color: #813405;
+    background-color: #C7EFCF;
+    text-align: center;
+    
+}
+
+#logo {
+    padding: 20px;
+    width: 200px;
+    fill: #813405;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    list-style-type: none;
+    padding: 10px;
+}
+
+header, footer, main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    padding: 10px;
+    margin: 5px;
+}
+
+input {
+    font-weight: bold;
+}
+
+button {
+    background-color: #F7DCA1;
+    border: none;
+    color: #813405;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+    .menu {
+        flex-direction: row;
+    }
+}

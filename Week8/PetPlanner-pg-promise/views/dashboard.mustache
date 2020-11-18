@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width' initial-scale='1.0' maximum-scale='1.0'/>
+        <title>PetPlanner</title>
+        <link rel="shortcut icon" href="/images/pepper.svg" type="image/x-icon">
+        <link rel='stylesheet' href='/styles/styles.css'/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        {{> header}}
+        {{> menu}}
+        <main>
+            <nav>
+                <form method="GET" action="/pet/add-pet">
+                    <button>Add Pet</button>
+                </form>
+            </nav>
+        </main>
+        <aside>
+            {{#pets}}
+                <h3>{{petname}}</h3>
+                <img src="{{imageurl}}" alt="pet photo" width="300px">
+                <p>Favorite things: {{favorites}}</p>
+                <form method="POST" action="/pet/delete">
+                    <input type="hidden" name="petid" value={{petid}}>
+                    <button>Delete</button>
+                </form>
+                <form method="POST" action="/pet/edit">
+                    <input type="hidden" name="petid" value={{petid}}>
+                    <button>Edit</button>
+                </form>
+                <form method="POST" action="/pet/pet-care">
+                    <input type="hidden" name="petid" value={{petid}}>
+                    <button>View Providers</button>
+                </form>
+            {{/pets}}
+        </aside>
+        {{> footer}}
+    </body>
+</html>

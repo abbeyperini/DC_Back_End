@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <meta name='viewport' content='width=device-width' initial-scale='1.0' maximum-scale='1.0'/>
+        <title>PetPlanner</title>
+        <link rel="shortcut icon" href="/images/pepper.svg" type="image/x-icon">
+        <link rel='stylesheet' href='/styles/styles.css'/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        {{> header}}
+        {{> menu}}
+        <main>
+            <form method="POST" action="/pet/create-pet">
+                <input type="text" placeholder="Pet Name" name="petname">
+                <input type="text" placeholder="Brand of Food" name="foodbrand">
+                <input type="text" placeholder="Cups per meal" name="amount">
+                <input type="text" placeholder="Meals per day" name="perday">
+                <input type="text" placeholder="Favorite things" name="favorites">
+                <input type="text" placeholder="Image URL" name="imageurl">
+                <label for="published">Publish pet to community page?</label>
+                <input type="checkbox" id="published" name="published" value="true" checked>
+                <button>Submit</button>
+            </form>
+        </main>
+        {{> footer}}
+    </body>
+</html>

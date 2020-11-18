@@ -1,0 +1,3 @@
+- https://superjavascript.com/t/javascript-notifications/
+- change logo color
+- input validation
