@@ -1,6 +1,6 @@
 <h1> Week 7 and Week 8 DigitalCrafts Full-Stack Immersive </h1>
 
- - Coursework on Node, Express, Mustache server side pages, SQL, CRUD, and Sequelize ORM. It contains assignments, files, and 
+ - Coursework on Node, Express, Mustache server side pages, SQL, CRUD, pg promise, and Sequelize ORM. It contains assignments, files, and 
   screenshots from week 7 and week 8.  
 
 <h2> Summary </h2>
@@ -42,3 +42,8 @@
 
 - Prompt was to add the ability to allow user to register, login, signout, and only see their information after they login successfully to a previous app.
 - We were encouraged to apply these things to a hobby project if we didn't like the previous prompt, so I started PetPlanner.
+
+**Week 8 - old versions of Pet Planner**
+
+- The week 8 folder contains two versions of my hobby PetPlanner app, using pg-promise and sequelize with mustache templates. 
+- Go to my [PetPlanner repository](https://github.com/abbeyperini/PetPlanner) to see the current version using React and screenshots.
